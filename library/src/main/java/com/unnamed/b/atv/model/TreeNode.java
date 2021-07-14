@@ -19,6 +19,11 @@ import java.util.List;
 public class TreeNode {
     public static final String NODES_ID_SEPARATOR = ":";
 
+    private float cost;
+    private int id;
+    private String name;
+    private int level;
+    private boolean selected = false;
     private int mId;
     private int mLastId;
     private TreeNode mParent;
@@ -30,6 +35,46 @@ public class TreeNode {
     private TreeNodeLongClickListener mLongClickListener;
     private Object mValue;
     private boolean mExpanded;
+
+    private String getName() {
+        return name;
+    }
+
+    private void setName(String name) {
+        this.name = name;
+    }
+
+    private int getLevel() {
+        return level;
+    }
+
+    private void setLevel(int level) {
+        this.level = level;
+    }
+    
+    private int getId() {
+        return id;
+    }
+
+    private void setId(int id) {
+        this.id = id;
+    }
+
+    private float getCost() {
+        return cost;
+    }
+
+    private void setCost(float cost) {
+        this.cost = cost;
+    }
+    
+    private boolean isSelected() {
+        return selected;
+    }
+
+    private void setSelected(boolean selected) {
+        this.selected = selected;
+    }
 
     public static TreeNode root() {
         TreeNode root = new TreeNode(null);
